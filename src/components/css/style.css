@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+  }
+ 
+  body{
+      background: #f3f2ef;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      height: 100vh;
+      width: 100vh;
+      font-family: "Jost", sans-serif;
+      
+  }
+  
+  .box {
+    width: 25vw;
+    height: 60vh;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.2rem 3rem rgba(0,0,0,0.2);
+    background: #a5bbdd;
+    overflow: hidden;
+    transform: translate3d(0,0,0);
+    
+    min-width: 20rem;
+    min-height: 15rem;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+  
+  h1 {
+   
+    text-align: center;
+    text-transform: capitalize;
+  }
+  
+  
+  
+  .box .inputData input{
+   width: 50%;
+   align-items: center;
+    padding: 10px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border: none;
+    background: transparent;
+    outline: none;
+    text-transform: capitalize;
+  }
+  
+  
+  .box input[type="search"] {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: black;
+   background-color: white;
+  
+    border-radius: 16px;
+    font-size: 14px;
+    text-align: center;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .box .inputData input:focus~label, .box .inputData input:valid~label {
+    top: -20px;
+    left: 0;
+    font-size: 12px;
+    color: #03a9f4;
+    text-align: center;
+  }
+
+
+.box:after 
+{
+    content: "";
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    transform: translate3d(0,0,0);
+}
+.errorMsg
+{
+    text-transform: uppercase;
+    text-align: center;
+}
+.location
+{
+    text-transform: capitalize;
+    padding: 10px 0 0 0;
+    text-align: center;
+}
+
+.tempmin_max
+{
+ position: relative;
+  font-size: x-small;
+  text-align: center;
+  z-index: 999;
+  padding: 10px 0 0 0;
+  
+}
+
+.temp{
+  padding: 10px 0 0 0;
+  text-align: center;
+}
+.humidity
+{
+  text-align: center;
+  padding: 10px 0 0 0 ;
+  position: relative;
+  z-index: 999;
+}
+
+.content{
+  position: absolute;
+  width: 100vh;
+  height: 20vh;
+  background:transparent;
+  overflow: hidden;
+  bottom: 0;
+  }
+
+
+  .content .wave
+  {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background: url("../../images/wave.png");
+    background-size: 500px 80px;
+    z-index: 1;
+    transform-origin: 50% 48%;
+    
+    animation: animate 3s linear infinite;
+    opacity: 0.1;
+  }
+  
+   .wave.-one
+  {
+    animation: animate 8s linear infinite;
+    z-index: 5;
+    opacity: 0.8;
+    animation-delay: -1s;
+    bottom: -9px;
+    
+  } 
+
+
+   .wave.-two
+  {
+    animation: animate2 6s linear infinite;
+    z-index: 4;
+    opacity: 0.5;
+    animation-delay: -3s;
+    bottom: -6px;
+}
+
+
+ .wave.-three 
+{
+  animation: animate 10s linear infinite;
+z-index: 3;
+opacity: 0.3;
+animation-delay: -2s;
+bottom: -3px;
+} 
+
+.wave.-four
+{
+  animation: animate2 7s linear infinite;
+z-index: 2;
+opacity: 0.7;
+animation-delay: -5s;
+bottom: -2px;
+} 
+
+
+@keyframes animate
+{
+  0%
+  {
+    background-position-x: 0;
+  }
+  100%
+{
+ background-position-x: -1000px;
+}
+}
+
+@keyframes animate2
+{
+  0%
+  {
+    background-position-x: 0;
+  }
+  100%
+{
+ background-position-x: 1000px;
+}
+}
+
+
+
+
+
+
+
+
+
+::-webkit-input {
+    text-align: center;
+  }
+  
+  :-moz-input {
+    text-align: center;
+  }
+
+
+  @media only screen and (max-width: 480px) {
+    .box {
+      width: 25vw;
+    height: 50vh;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.2rem 3rem rgba(0,0,0,0.2);
+    background: #a5bbdd;
+    overflow: hidden;
+    transform: translate3d(0,0,0);
+    
+    min-width: 18rem;
+    min-height: 15rem;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+      }
+
+
+      .location
+      {
+          text-transform: capitalize;
+          padding: 40px 0 0 0;
+          text-align: center;
+      }
+
+      .temp{
+        padding: 20px 0 0 0;
+        text-align: center;
+      }
+
+      
+  .box .inputData input{
+    width: 70%;
+    align-items: center;
+    
+     padding: 10px;
+     font-size: 16px;
+     letter-spacing: 1px;
+     background-color: #fff;
+     margin-bottom: 10px;
+     margin-top: 35px;
+     border: none;
+     outline: none;
+     text-transform: capitalize;
+   }
+   .tempmin_max
+{
+ position: relative;
+  font-size: x-small;
+  text-align: center;
+  z-index: 999;
+}
+
+.content{
+  position: absolute;
+  width: 100vh;
+  height: 13vh;
+  background:transparent;
+  overflow: hidden;
+  bottom: 0;
+  }
+
+  
+
+}
