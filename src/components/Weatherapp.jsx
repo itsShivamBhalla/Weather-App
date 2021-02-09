@@ -35,7 +35,7 @@ const Weatherapp =()=>{
        !city ? (<p className="errorMsg">No Data Found</p>) : ( <div>
        <div className="info">
         <h2 className="location">
-        <FontAwesomeIcon icon={faStreetView}/>{search}</h2>
+        <FontAwesomeIcon className="loc_icon" icon={faStreetView}/>{search}</h2>
         <h1 className="temp">{city.temp}°Cel</h1>
         <h3 className="tempmin_max">Min-Temperature : {city.temp_min}°Cel <br/>   Max-Temperature : {city.temp_max}°Cel</h3>
         <h4 className="humidity">Humidity: {city.humidity}%</h4>
